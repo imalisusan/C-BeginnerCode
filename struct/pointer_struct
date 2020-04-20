@@ -1,0 +1,20 @@
+#include<iostream>
+#include<string>
+using namespace std;
+struct Player{
+	int player_id;
+	string player_name;
+	string player_position;
+	int age;
+	
+};
+int main()
+{
+	Player player_details = {1,"John","Left-Back",20};
+
+	Player *footballer;
+
+
+	
+	return 0;
+}
