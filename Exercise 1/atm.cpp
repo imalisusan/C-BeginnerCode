@@ -11,7 +11,7 @@ int withdrawal(int withdraw)
     else
             {
             balance=balance-withdraw;
-            cout<<"\nYou have withdrawn: Kshs. %d.\n\nYour account balance is: Kshs. %d.\n", withdraw, balance;
+            cout<<"\nYou have withdrawn: Kshs." <<withdraw+".\n\nYour account balance is: Kshs." <<balance+".\n";
             }
     return 0;
 }
@@ -28,7 +28,7 @@ int fund_transfer(int transfer)
         else
         {
         balance=balance-transfer;
-        cout<<"\nYou have transfered: Kshs. %d.\n\nYour account balance is: Kshs. %d.\n", transfer, balance;
+        cout<<"\nYou have transfered: Kshs." <<transfer+"\n\nYour account balance is: Kshs." <<balance+ "/n";
         }
         return 0;
 }
@@ -41,7 +41,7 @@ int bank_deposit(int deposit)
         else
         {
         balance=balance+deposit;
-        cout<<"\nYou have deposited: Kshs. %d.\n\nYour account balance is: Kshs. %d.\n", deposit, balance;
+        cout<<"\nYou have deposited: Kshs." <<deposit +".\n\nYour account balance is: Kshs."<<balance+ ".\n", deposit, balance;
         }  
         return 0;
 }

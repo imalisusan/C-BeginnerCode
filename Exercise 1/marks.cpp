@@ -1,5 +1,6 @@
-#include<stdio.h>
+#include<iostream>
 #include<math.h>
+using namespace std;
 int student_num=0;
 int passedStudents(int marks[], int size)
     {
@@ -16,7 +17,7 @@ int passedStudents(int marks[], int size)
         }
         count++;
     }
-    printf("The numbers of students who have passed are: %d\n", num_passed);
+    cout<<"The numbers of students who have passed are:" <<num_passed;
     return 0;
     }
 float markaverage(int marks[], int student_num)
@@ -28,7 +29,7 @@ float markaverage(int marks[], int student_num)
             sum=sum+marks[count];
             }
         average=sum/student_num;
-        printf("The average of the student's marks is: %f\n", average);
+        cout<<"The average of the student's marks is: "<< average;
     return 0;
     }
 float stdDeviation(int marks[], int student_num)
@@ -49,24 +50,24 @@ float stdDeviation(int marks[], int student_num)
             }
             variance=sum_diff_square/student_num;
             deviation=sqrt(variance);
-            printf("The standard deviation is: %lf\n", deviation);
+            cout<<"The standard deviation is: "<< deviation;
     return 0;
     }
 int main()
 {  
     int student_num,passed;
     float average, std_deviation;
-    printf("Please enter the number of students:");
-    scanf("%d",&student_num);
+    cout<<"Please enter the number of students:";
+    cin>>student_num;
     int marks[student_num];
 
     for(int i=0;i<student_num;i++)
         {
-            printf("Enter marks for student %d:",i+1);
-            scanf("%d",&marks[i]);
+            cout<<"Enter marks for student "<< i+1;
+            cin>>marks[i];
             if(marks[i]<0||marks[i]>100)
                 {
-                printf("Please enter valid marks from 0 to 100\n.");
+                cout<<"Please enter valid marks from 0 to 100\n.";
                 break;
                 }
             else
