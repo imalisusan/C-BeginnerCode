@@ -6,29 +6,29 @@ int withdrawal(int withdraw)
 {
     if(withdraw>balance || withdraw>1000000)
             {
-                cout<<"You cannot withdraw more that amount\n\n";
+                cout<<"You cannot withdraw more that amount"<<endl;
             }
     else
             {
             balance=balance-withdraw;
-            cout<<"\nYou have withdrawn: Kshs." <<withdraw+".\n\nYour account balance is: Kshs." <<balance+".\n";
+            cout<<"You have withdrawn: Kshs." <<withdraw+"Your account balance is: Kshs." <<balance <<endl;
             }
     return 0;
 }
-int balance_withdraw()
+int balance_amount()
 {
-    cout<<"\nYour account balance is: Kshs. %d.\n\n", balance;
+    cout<<"Your account balance is: Kshs." <<balance<<endl;
 }
 int fund_transfer(int transfer)
 {
         if(transfer>balance || transfer>1000000)
         {
-            cout<<"You cannot transfer more that amount\n\n";
+            cout<<"You cannot transfer more that amount"<<endl;
         }
         else
         {
         balance=balance-transfer;
-        cout<<"\nYou have transfered: Kshs." <<transfer+"\n\nYour account balance is: Kshs." <<balance+ "/n";
+        cout<<"You have transfered: Kshs." <<transfer+"Your account balance is: Kshs." <<balance<<endl;
         }
         return 0;
 }
@@ -36,12 +36,12 @@ int bank_deposit(int deposit)
 {
         if(deposit>1000000)
         {
-        cout<<"You cannot deposit more than 1000000\n\n";
+        cout<<"You cannot deposit more than 1000000"<<endl;
         }
         else
         {
         balance=balance+deposit;
-        cout<<"\nYou have deposited: Kshs." <<deposit +".\n\nYour account balance is: Kshs."<<balance+ ".\n", deposit, balance;
+        cout<<"You have deposited: Kshs." <<deposit +".Your account balance is: Kshs."<<balance<<endl;
         }  
         return 0;
 }
@@ -52,38 +52,38 @@ int main()
     cin>>password1;
     while(password!=password1) 
    {
-        cout<<"Wrong password!\n\n";
-        cout<<"Please enter your password:\n\n";
+        cout<<"Wrong password!"<<endl;
+        cout<<"Please enter your password:"<<endl;
         cin>>password1;
    }
     char choice;
     int balance=5000000, withdraw, transfer,deposit, result;
-    cout<<"\nHello,Yasan :)\n\n";
-    cout<<"The following are transactions you can carry out:\n\nMake a withdrawal. Choose letter 'W' for this.\n\nBalance Enquiry. Choose letter 'B' for this.\n\nMake a bank deposit. Choose letter 'D' for this.\n\nMake a fund transfer. Choose letter 'T' for this.\n\n";
+    cout<<"Hello,Susan :)"<<endl;
+    cout<<"The following are transactions you can carry out:\nMake a withdrawal. Choose letter 'W' for this.\nBalance Enquiry. Choose letter 'B' for this.\nMake a bank deposit. Choose letter 'D' for this.\nMake a fund transfer. Choose letter 'T' for this.\n";
     cin>>choice;
     switch (choice)
     {
     case 'W':
-        cout<<"\nEnter amount to withdraw:\n\n";
+        cout<<"Enter amount to withdraw:"<<endl;
         cin>>withdraw;
         result= withdrawal(withdraw);
         break;
     case 'B':
-        result=balance_withdraw();
+        result=balance_amount();
         break;
     case 'T':
-        cout<<"\nEnter amount to transfer:\n\n";
+        cout<<"Enter amount to transfer:"<<endl;
         cin>>transfer;
         result=fund_transfer(transfer);
         break;
     case 'D':
-        cout<<"\nEnter amount to deposit:\n\n";
+        cout<<"Enter amount to deposit:"<<endl;
         cin>>deposit;
         result=bank_deposit(deposit);
         break;
     
     default:
-        cout<<"\nPlease choose a valid input.\n\n";
+        cout<<"Please choose a valid input."<<endl;
         break;
     }
     

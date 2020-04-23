@@ -17,7 +17,7 @@ int passedStudents(int marks[], int size)
         }
         count++;
     }
-    cout<<"The numbers of students who have passed are:" <<num_passed;
+    cout<<"The numbers of students who have passed are:" <<num_passed<<endl;
     return 0;
     }
 float markaverage(int marks[], int student_num)
@@ -29,7 +29,7 @@ float markaverage(int marks[], int student_num)
             sum=sum+marks[count];
             }
         average=sum/student_num;
-        cout<<"The average of the student's marks is: "<< average;
+        cout<<"The average of the student's marks is: "<< average<<endl;
     return 0;
     }
 float stdDeviation(int marks[], int student_num)
@@ -50,7 +50,7 @@ float stdDeviation(int marks[], int student_num)
             }
             variance=sum_diff_square/student_num;
             deviation=sqrt(variance);
-            cout<<"The standard deviation is: "<< deviation;
+            cout<<"The standard deviation is: "<< deviation<<endl;
     return 0;
     }
 int main()
@@ -63,11 +63,11 @@ int main()
 
     for(int i=0;i<student_num;i++)
         {
-            cout<<"Enter marks for student "<< i+1;
+            cout<<"Enter marks for student "<< i+1<<endl;
             cin>>marks[i];
             if(marks[i]<0||marks[i]>100)
                 {
-                cout<<"Please enter valid marks from 0 to 100\n.";
+                cout<<"Please enter valid marks from 0 to 100."<<endl;
                 break;
                 }
             else
